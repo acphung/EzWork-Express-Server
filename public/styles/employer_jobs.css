@@ -1,0 +1,356 @@
+body{
+    margin: 0px;
+    font-family: 'Nunito', sans-serif;
+}
+
+button, a{
+    font-weight: 700;
+}
+
+#Container{
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Header{
+    height: 150px;
+    background-color: #006A00;
+    margin-top: 0px;
+}
+
+#SideBar{
+    width: 25%;
+    height: 100%;
+    padding-top: 10px;
+	padding-bottom: 68px;
+    background-color: #006A00;
+    list-style-type: none;
+    float: left;
+}
+
+#SideBar li a {
+    border: 2px solid #fff; /* Add a border to all links */
+    width:70%;
+    margin-top: -2px; /* Prevent double borders */
+    margin-left: 10%;
+    background-color: #006A00; /* Grey background color */
+    border-radius: 5px;
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: #fff; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+}
+ 
+#SideBar li a:hover:not(.header) {
+    background-color: #fff; /* Add a hover effect to all links, except for headers */
+    color: #006A00;
+}
+
+#MainBody{
+    width: 75%;
+    height: 100%;
+    background-color: white;
+    float: right;
+}
+
+#banner{
+	margin-left: -5px;
+    width: 450px;
+    height: 170px;
+    display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#head{
+    vertical-align: top;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 72px;
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+#welcome_user{
+    display: none;
+    text-align: center;
+}
+
+#welcome_guest{
+
+}
+
+#logout_button{
+        margin-right: auto;
+        margin-left: auto;
+}
+
+.welcome{
+        float: right;
+        width: 250px;
+        margin-right: 20px;
+        font-size: 18px;
+        color: white;
+}
+
+.welcome h4{
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 0px;
+}
+
+.error-text {
+	background: #ff6666;
+	border-radius: 5px;
+        width: 91%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 10px;
+	text-align: left;
+	padding-left: 5px;
+	display: none;
+}
+
+.error-text p{
+        color: black;
+        margin: 0px;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 200px;
+}
+/*
+#but{
+	float: right;
+	
+}
+*/
+
+/* Popup Content */
+#popups{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+#app_pop_inner{
+	background-color: #006A00;
+	color: white;
+	border-radius: 15px;
+	border: 1px solid black;
+	width: 75%;
+	margin-left: 12%;
+	padding-top: 5px
+}
+
+#app_pop_inner p{
+	margin-left: 8px;
+	margin-top: 2px;
+	margin-bottom: 0px;
+}
+
+#delete_pop_inner{
+    position: fixed;
+    top: 40%;
+    left: 18%;
+    background-color: #006A00;
+    color: white;
+    border-radius: 15px;
+    border: 1px solid black;
+    width: 42%;
+    margin-left: 12%;
+    padding-top: 5px
+}
+
+#delete_pop_inner p{
+    margin-left: 8px;
+    margin-top: 2px;
+    margin-bottom: 0px;
+}
+
+#delete_pop_buttons {
+    margin-right: 8px;
+    float: right;
+}
+
+#app_pop_pic{
+	float: right;
+	margin: 10px;
+}
+
+
+#login_pop_inner{
+    background-color: #006A00; /* change this later */
+    color: #fff;
+    border-radius: 15px;
+    padding-top: 5px;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 1px solid black;
+    width: 250px; /* Could be more or less, depending on screen size */
+    height: auto;
+}
+
+.popup-content{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+
+.container button,.welcome button{
+  background: #006A00;
+  margin-top: 10px;
+  font-size: 14pt;
+  margin-left: 8px;
+  margin-right: -2px;
+  margin-bottom: 10px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 15px;
+  display: inline-block;
+  width: 112px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+
+.container button:hover, .welcome button:hover{
+  background: #fff;
+  color: #006A00;
+  cursor: pointer;
+}
+
+/* The Close Button */
+.close{
+    /* Position it in the top right corner outside of the modal */
+    /* NOTE DYLAN DOES NOT LIKE THE X THERE */
+    position: absolute;
+    right: 25px;
+    top: 0; 
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover{
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+} 
+
+
+
+#jobsDiv{
+	overflow: auto;
+	height: 100%;
+}
+
+#jobList {
+    /* Remove default list styling */
+    list-style-type: none;
+    margin: 0; 
+    padding: 0;
+}
+
+#jobList li {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    margin-bottom: 0px;
+    text-decoration: none; /* Remove default text underline */
+    color: black; /* Add text color */
+    display: flex; 
+}
+#jobList .appli{
+	padding-left: 10%;
+	border: 1px solid #ddd;
+    margin-top: -1px; /* Prevent double borders */
+    margin-bottom: 0px;
+    text-decoration: none; /* Remove default text underline */
+    color: black; /* Add text color */
+    display: flex; 
+	background-color: #ededed;
+
+}
+html, #MainBody{
+	background-color: #006A60;
+}
+
+
+.jobListLeft{
+	display: inline-block;
+	vertical-align: text-top;
+	width: 63%;
+	margin: 0px;
+	padding: 1%;
+}
+
+.jobListRight{
+	display: inline-block;
+	vertical-align: text-top;
+	width: 33%;
+	margin: 0px;
+	padding: 1%;
+}
+
+.jobListLeft p, .jobListRight p{
+	font-size: 18px;
+	margin: 0px;
+}
+
+.jobListLeft h5{
+	vertical-align: top;
+	font-size: 24px;
+	margin: 0px;
+}
+
+.jobListRight h5{
+	font-size: 20px;
+	margin: 0px;
+}
+
+#jobList li{
+    background-color: #e0e0e0;
+}
+
+#jobList .appli:hover{
+    background-color: #f5f5f5;
+}
+#jobList li:hover{
+    background-color: #d5d5d5;
+}

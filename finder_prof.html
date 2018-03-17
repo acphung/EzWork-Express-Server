@@ -1,0 +1,121 @@
+<DOCTYPE html>
+<html lang="en">
+	<head>
+	<title> Ezwork2 </title>
+	<meta charset="utf-8" />
+	<link href="/styles/finder_prof.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="/images/logo2.png">
+	<!-- <h1 div id="title">EzWork</h1> -->
+	</head>
+	<body>
+        <div id="Container">
+        <div id="Header">
+		<div id="welcome_user" class="welcome">
+                <h4 id="welcome_user_text">Welcome User</h4>
+                <button id="logout_button" onclick="logout()">Logout</button></div>
+        <img id="banner" src="/images/banner.png">
+
+		</div>
+        </div>
+
+
+       <div id="SideBar">
+                <li><a href="/">Home</a></li>
+                <!-- Logged in buttons -->
+                <li id="prof_button" style="display: none;">
+				<a id="prof_link" href="#">My Profile</a></li>
+                <li id="jobs_button" style="display: none;">
+				<a id="jobs_link" href="#">My Jobs</a></li>
+				<!-- Finders only -->
+                <li id="adv_search_button" style="display: none;">
+				<a href="#">Advanced Search</a></li>
+				<!-- Employers only -->
+                <li id="post_job_button" style="display: none;">
+				<a href="/JobPostCreation">Post Job</a></li>
+				<!-- Universal buttons -->
+				<li><a href="#">About EzWork</a></li>
+				<li><a href="#">Tutorial</a></li>
+                <li id="logout_button" style="display: none;" onclick="logout()">
+				<a href="#">Logout</a></li>
+				<li><a href="#">Contact Us</a></li>
+        </div>
+        <div id="MainBody">
+			<div id="Finder">
+
+				<div id="ProfilePic">
+					<div>
+						<img class="upload" src="/images/img_avatar2.png" alt="upload image" title="upload image">
+						<input id="upl" type="file" name="picture" accept="image/*" onchange="onFileInputChange()" />
+					</div>
+
+				</div>
+
+				<div id="name">
+					<div id="d3">
+					<button id="save" class="buttn" onclick="showedit(); hideTextBox()">Save</button>
+					<button id="cancel" class="buttn" onclick="showedit(); hideTextBox()">Cancel</button></div>
+					<button id="edit" class="buttn"onclick="addTextBox(); showbutt()">Edit</button>
+					<h3>Name</h3>
+					<p id="namebox" ></p>
+					<input type="text" class="mytext" placeholder="Enter text..." name="Test Name" id="box" style="display:none">
+					</div>
+
+				<div id="phone">
+					<button id="edit4" class="buttn"onclick="addTextBox4(); showbutt4()">Edit</button>
+					<div id="d6">
+					<button id="save" class="buttn" onclick="showedit4(); hideTextBox4()">Save</button>
+					<button id="cancel" class="buttn" onclick="showedit4(); hideTextBox4()">Cancel</button></div>
+					<h3>Phone Number</h3>
+					<p id="phonebox">(###)###-####</p>
+					<input type="text" class="mytext" placeholder="Enter text..." name="Test Name" id="box3" style="display:none">
+					</div>
+
+				<div id="City">
+					<button id="edit2" class="buttn" onclick="addTextBox2(); showbutt2()">Edit</button>
+					<div id="d4">
+					<button id="save" class="buttn" onclick="showedit2(); hideTextBox2()">Save</button>
+					<button id="cancel" class="buttn" onclick="showedit2(); hideTextBox2()">Cancel</button></div>
+					<h3>Location</h3>
+					<p id="loc"></p>
+					<input type="text" class="mytext" placeholder="Enter text..." name="Test Name" id="box1" style="display:none">
+				</div>
+
+				<div id="About">
+					<button id="edit3" class="buttn" onclick="addTextBox3(); showbutt3()">Edit</button>
+					<div id="d5">
+					<button id="save" class="buttn" onclick="showedit3(); hideTextBox3()">Save</button>
+					<button id="cancel" class="buttn" onclick="showedit3(); hideTextBox3()">Cancel</button></div>
+					<h3>About</h3>
+					<p id="abt"></p>
+					<textarea rows="4" cols="25"  placeholder="Enter text...." id="box2" style="display:none"></textarea>
+					</div>
+
+				<div id="Resume">
+					<div>
+						<input id="upl2" type="file" name="resume" accept=".pdf" onchange="onFileChange()" />
+					</div>
+					<a id="res" href="#">View Resume</a>
+				</div>
+			</div>
+		</div>
+        <div id="Footer"></div>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+        <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyCpAKm-xa-Tz3Cix-3io2C--dby4unJbow",
+          authDomain: "ezwork-89a16.firebaseapp.com",
+          databaseURL: "https://ezwork-89a16.firebaseio.com",
+          projectId: "ezwork-89a16",
+          storageBucket: "ezwork-89a16.appspot.com",
+          messagingSenderId: "526263272938"
+        };
+        firebase.initializeApp(config);
+        </script>
+			<script src="/scripts/finder_prof.js"></script>
+
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxWZDs0PaPEVNQG8PZbxfW3W2fI19wY-8&libraries=geometry&callback=mapInit" async defer></script>
+
+	</body>
+</html>

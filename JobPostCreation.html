@@ -1,0 +1,105 @@
+<DOCTYPE html>
+<html lang="en">
+	<head>
+	<title> Ezwork2 </title>
+	<meta charset="utf-8" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<link href="/styles/JobPostCreation.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="/images/logo2.png">
+	<!-- <h1 div id="title">EzWork</h1> -->
+	</head>
+	<body>
+
+        <div id="Container">
+			<div id="Header">
+				<div id="welcome_user" class="welcome">
+						<h4 id="welcome_user_text">Welcome User</h4>
+						<button id="logout_button" onclick="logout()">Logout</button></div>
+				<img id="banner" src="/images/banner.png">
+			</div>
+		</div>
+		<div id="overlay" onclick="off()">
+			<div id="overlayWrapper">
+				<div id="overlayContainer">
+					<h3>Job Title</h3>
+					<p>Location</p>
+					<p>Date and Time</p>
+					<p>Description</p>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="SideBar">
+                <li><a href="/">Home</a></li>
+                <!-- Logged in buttons -->
+                <li id="prof_button" style="display: none;">
+				<a id="prof_link" href="#">My Profile</a></li>
+                <li id="jobs_button" style="display: none;">
+				<a id="jobs_link" href="#">My Jobs</a></li>
+				<!-- Finders only -->
+                <li id="adv_search_button" style="display: none;">
+				<a href="#">Advanced Search</a></li>
+				<!-- Employers only -->
+                <li id="post_job_button" style="display: none;">
+				<a href="/JobPostCreation">Post Job</a></li>
+				<!-- Universal buttons -->
+				<li><a href="#">About EzWork</a></li>
+				<li><a href="#">Tutorial</a></li>
+                <li id="logout_button" style="display: none;" onclick="logout()">
+				<a href="#">Logout</a></li>
+				<li><a href="#">Contact Us</a></li>
+        </div>
+        <div id="MainBody">
+			<div id="JobCreationForm" style="width: 99%">
+				<h3>Job Title</h3>
+				<input type="text" id="Title" style="width: 99%"; ><br>
+				<h3>Location</h3>
+				<input type="text" id="Location" style="width: 99%"; ><br>
+				<!--<h3>Date<h3>
+				<input id="date" type="date">-->
+				<h3>Pay</h3>
+				$<input type="text" id="Payment" style="width: 40px; margin-bottom: 10px;" >/hr<br>
+				<div class="radio">
+				  <label><input type="radio" id="full" name="optradio">Full Time (20-40+hrs/wk)</label>
+				</div>
+				<div class="radio">
+				  <label><input type="radio" id="part" name="optradio">Part Time (10-20hrs/wk)</label>
+				</div>
+				<div class="radio">
+				  <label><input type="radio" id="small" name="optradio">Small Time (1-10hrs/wk)</label>
+				</div><div class="radio">
+				  <label><input type="radio" id="once" name="optradio" checked>One Time</label>
+				</div>
+
+
+
+				<br>
+				<h3>Description</h3>
+				<textarea name="Description" id="Desc" style="width: 99%" rows="20%";></textarea><br>
+				<h4 id="errortext"> Please fill out all of the above fields before submitting.<h4>
+				<h3>Picture (Optional)</h3>
+				<input type="file" id="pic" name="pic" accept="image/*">
+				<button id="Submit" onclick="writeJob()"; >Submit</button>
+
+			</div>
+
+		</div>
+        <div id="Footer"></div>
+        <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+        <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyCpAKm-xa-Tz3Cix-3io2C--dby4unJbow",
+          authDomain: "ezwork-89a16.firebaseapp.com",
+          databaseURL: "https://ezwork-89a16.firebaseio.com",
+          projectId: "ezwork-89a16",
+          storageBucket: "ezwork-89a16.appspot.com",
+          messagingSenderId: "526263272938"
+        };
+        firebase.initializeApp(config);
+        </script>
+        <script src="/scripts/JobPostCreation.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxWZDs0PaPEVNQG8PZbxfW3W2fI19wY-8&libraries=geometry&callback=mapInit" async defer></script>
+	</body>
+</html>

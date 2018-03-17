@@ -1,0 +1,198 @@
+body{
+    margin: 0px;
+    font-family: 'Nunito', sans-serif;
+	display: block;
+    width: 100%;
+	background-color: #006A00;
+	height: 100%;
+}
+
+button, a{
+    font-weight: 700;
+}
+
+#Container{
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Header{
+    height: 150px;
+    background-color: #006A00;
+    margin-top: 0px;
+}
+
+#welcome_user{
+    display: block;
+    text-align: center;
+}
+
+.welcome{
+        float: right;
+        width: 250px;
+        margin-right: 20px;
+        font-size: 18px;
+        color: white;
+}
+
+.welcome h4{
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 0px;
+}
+
+.welcome button{
+  background: #006A00;
+  margin-top: 10px;
+  font-size: 14pt;
+  margin-left: 8px;
+  margin-right: -2px;
+  margin-bottom: 10px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 15px;
+  display: inline-block;
+  width: 112px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+
+.welcome button:hover{
+  background: #fff;
+  color: #006A00;
+  cursor: pointer;
+}
+
+#JobCreationForm button{
+	background-color: #006A60;
+  font-size: 14pt;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 5px;
+  display: inline-block;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+
+#JobCreationForm button:hover{
+	background-color: #fff;
+	color: #006A60;
+}
+
+#logout_button{
+        margin-right: auto;
+        margin-left: auto;
+}
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+#overlayWrapper{ 
+	width: 500px; 
+	margin: 70px auto; 
+	text-align: left; 
+}
+#OverlayContainer{ 
+	background-color: #FFF; 
+	padding: 20px; 
+	border-radius: 4px;
+}
+#JobCreationForm{
+	display:block;
+	padding-left: 5px;
+   `width: 100%;
+    height: auto;
+	min-height: 100%;
+	background-color: #006A60;
+    float: left;
+	border: 4px solid #fff;
+	border-radius: 5px;
+}
+#Submit{
+	display:block;
+	padding-left: 5px;
+	margin-right: 6%;
+    float: right;
+}
+
+
+#SideBar{
+	display: block;
+    width: 25%;
+	height: auto;
+    padding-top: 10px;
+	position: relative;
+	padding-bottom: 68px;
+    background-color: #006A00;
+    list-style-type: none;
+    float: left;
+	
+}
+#ScrollBar{
+	
+    width: 25%;
+	height: auto;
+	position: fixed;
+	
+}
+
+#SideBar li a {
+    border: 2px solid #fff; /* Add a border to all links */
+    width: 70%;
+    margin-top: -2px; /* Prevent double borders */
+    margin-left: 10%;
+    background-color: #006A00; /* Grey background color */
+    border-radius: 5px;
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: #fff; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+
+}
+ 
+#SideBar li a:hover:not(.header) {
+    background-color: #fff; /* Add a hover effect to all links, except for headers */
+    color: #006A00;
+}
+
+
+#MainBody{
+    width: 75%;
+	background-color: #006A00;
+	margin-left: auto;
+	margin-right: auto;
+    float: right;
+	height: 100%;
+}
+
+#JobCreationForm{
+	padding-bottom: 15px;
+}
+
+#banner{
+	margin-left: -5px;
+    width: 450px;
+    height: 170px;
+    display: inline-block;
+}
+
+
+
+
